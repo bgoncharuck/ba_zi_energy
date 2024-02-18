@@ -1,0 +1,32 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "flutter_lints",
+      "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/flutter_lints-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "lints",
+      "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/lints-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "very_good_analysis",
+      "rootUri": "file:///Users/volos/.pub-cache/hosted/pub.dev/very_good_analysis-5.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "ba_zi_energy",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    }
+  ],
+  "generated": "2024-02-17T11:20:03.878890Z",
+  "generator": "pub",
+  "generatorVersion": "3.2.6"
+}

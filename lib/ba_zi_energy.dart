@@ -4,3 +4,5 @@ export 'src/exts.dart';
 export 'src/elements.dart';
 export 'src/energies.dart';
 export 'src/animals.dart';
+export 'src/compatibility/day_master_compatibility.dart';
+export 'src/compatibility/zoo_compatibility.dart';
