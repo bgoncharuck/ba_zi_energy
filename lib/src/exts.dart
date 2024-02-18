@@ -20,3 +20,20 @@ extension IndexMaster<E> on List<E> {
     return this[_smaller];
   }
 }
+
+/// ```Dart
+/// int year
+/// int month
+/// int day
+/// ```
+class ConstDateTime {
+  final int year;
+  final int month;
+  final int day;
+
+  const ConstDateTime(this.year, this.month, this.day);
+
+  DateTime toDateTime() {
+    return DateTime(year, month, day);
+  }
+}
