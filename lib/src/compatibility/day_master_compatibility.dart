@@ -4,11 +4,6 @@ import '../energies.dart';
 
 const notSorted = <AnimalSynergy>[
   //
-  AnimalSynergy(animal: Animal.Dragon, flavor: Energy.WoodYang),
-  AnimalSynergy(animal: Animal.Dragon, flavor: Energy.FireYang),
-  AnimalSynergy(animal: Animal.Dragon, flavor: Energy.EarthYang),
-  AnimalSynergy(animal: Animal.Dragon, flavor: Energy.MetalYang),
-  AnimalSynergy(animal: Animal.Dragon, flavor: Energy.WaterYang),
   AnimalSynergy(animal: Animal.Snake, flavor: Energy.WoodYin),
   AnimalSynergy(animal: Animal.Snake, flavor: Energy.FireYin),
   AnimalSynergy(animal: Animal.Snake, flavor: Energy.EarthYin),
@@ -59,40 +54,47 @@ const notSorted = <AnimalSynergy>[
 const perfectHusband = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Tiger, flavor: Energy.MetalYang),
   AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.MetalYin),
+  AnimalSynergy(animal: Animal.Dragon, flavor: Energy.WoodYang),
 ];
 
 const masculineWife = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Tiger, flavor: Energy.MetalYang),
   AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.MetalYin),
+  AnimalSynergy(animal: Animal.Dragon, flavor: Energy.WoodYang),
 ];
 
 const perfectWife = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Tiger, flavor: Energy.EarthYang),
   AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.EarthYin),
+  AnimalSynergy(animal: Animal.Dragon, flavor: Energy.WaterYang),
 ];
 
 const feminineHusband = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Tiger, flavor: Energy.EarthYang),
   AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.EarthYin),
+  AnimalSynergy(animal: Animal.Dragon, flavor: Energy.WaterYang),
 ];
 
 const maleHealthKiller = <AnimalSynergy>[];
 
 const femaleHealthKiller = <AnimalSynergy>[];
 
-const traitor = <AnimalSynergy>[
+const cheater = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Tiger, flavor: Energy.WoodYang),
   AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.WoodYin),
+  AnimalSynergy(animal: Animal.Dragon, flavor: Energy.EarthYang),
 ];
 
-/// kept woman/man
+/// exploiter, kept woman/man
 const resourceAbsorbing = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Tiger, flavor: Energy.FireYang),
   AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.FireYin),
+  AnimalSynergy(animal: Animal.Dragon, flavor: Energy.MetalYang),
 ];
 
 /// provider
 const resourceAbsorbed = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Tiger, flavor: Energy.WaterYang),
   AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.WaterYin),
+  AnimalSynergy(animal: Animal.Dragon, flavor: Energy.FireYang),
 ];
