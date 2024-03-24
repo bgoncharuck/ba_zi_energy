@@ -2,6 +2,23 @@ import '../animals.dart';
 import '../elements.dart';
 import '../energies.dart';
 
+enum PartnerType {
+  PerfectHusband,
+  MasculineWife,
+  PerfectWife,
+  FeminineHusband,
+  MaleHealthKiller,
+  FemaleHealthKiller,
+  Polyamorous,
+  Exploiter,
+  Provider,
+}
+
+PartnerType partnerType(AnimalSynergy synergy, Sex sex) {
+  if (sex == Sex.Yang) {
+  } else {}
+}
+
 const perfectHusband = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Tiger, flavor: Energy.MetalYang),
   AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.MetalYin),
