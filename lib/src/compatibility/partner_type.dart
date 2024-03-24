@@ -16,7 +16,45 @@ enum PartnerType {
 
 PartnerType partnerType(AnimalSynergy synergy, Sex sex) {
   if (sex == Sex.Yang) {
-  } else {}
+    if (perfectHusband.contains(synergy)) {
+      return PartnerType.PerfectHusband;
+    }
+    if (feminineHusband.contains(synergy)) {
+      return PartnerType.FeminineHusband;
+    }
+    if (maleHealthKiller.contains(synergy)) {
+      return PartnerType.MaleHealthKiller;
+    }
+    if (polygamy.contains(synergy)) {
+      return PartnerType.Polyamorous;
+    }
+    if (exploiter.contains(synergy)) {
+      return PartnerType.Exploiter;
+    }
+    if (provider.contains(synergy)) {
+      return PartnerType.Provider;
+    }
+  }
+  if (perfectWife.contains(synergy)) {
+    return PartnerType.PerfectWife;
+  }
+  if (masculineWife.contains(synergy)) {
+    return PartnerType.MasculineWife;
+  }
+  if (femaleHealthKiller.contains(synergy)) {
+    return PartnerType.FemaleHealthKiller;
+  }
+  if (polygamy.contains(synergy)) {
+    return PartnerType.Polyamorous;
+  }
+  if (exploiter.contains(synergy)) {
+    return PartnerType.Exploiter;
+  }
+  if (provider.contains(synergy)) {
+    return PartnerType.Provider;
+  }
+
+  throw Exception('Partner type not found');
 }
 
 const perfectHusband = <AnimalSynergy>[
