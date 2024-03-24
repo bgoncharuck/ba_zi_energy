@@ -4,11 +4,6 @@ import '../energies.dart';
 
 const notSorted = <AnimalSynergy>[
   //
-  AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.WoodYin),
-  AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.FireYin),
-  AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.EarthYin),
-  AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.MetalYin),
-  AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.WaterYin),
   AnimalSynergy(animal: Animal.Dragon, flavor: Energy.WoodYang),
   AnimalSynergy(animal: Animal.Dragon, flavor: Energy.FireYang),
   AnimalSynergy(animal: Animal.Dragon, flavor: Energy.EarthYang),
@@ -63,18 +58,22 @@ const notSorted = <AnimalSynergy>[
 
 const perfectHusband = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Tiger, flavor: Energy.MetalYang),
+  AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.MetalYin),
 ];
 
-const abuserWife = <AnimalSynergy>[
+const masculineWife = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Tiger, flavor: Energy.MetalYang),
+  AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.MetalYin),
 ];
 
 const perfectWife = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Tiger, flavor: Energy.EarthYang),
+  AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.EarthYin),
 ];
 
-const abuserHusband = <AnimalSynergy>[
+const feminineHusband = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Tiger, flavor: Energy.EarthYang),
+  AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.EarthYin),
 ];
 
 const maleHealthKiller = <AnimalSynergy>[];
@@ -83,12 +82,17 @@ const femaleHealthKiller = <AnimalSynergy>[];
 
 const traitor = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Tiger, flavor: Energy.WoodYang),
+  AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.WoodYin),
 ];
 
+/// kept woman/man
 const resourceAbsorbing = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Tiger, flavor: Energy.FireYang),
+  AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.FireYin),
 ];
 
+/// provider
 const resourceAbsorbed = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Tiger, flavor: Energy.WaterYang),
+  AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.WaterYin),
 ];
