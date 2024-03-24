@@ -7,11 +7,54 @@ enum PartnerType {
   MasculineWife,
   PerfectWife,
   FeminineHusband,
-  MaleHealthKiller,
-  FemaleHealthKiller,
+  MaleEnergyOvercharge,
+  FemaleEnergyOvercharge,
   Polyamorous,
   Exploiter,
   Provider,
+}
+
+List<PartnerType> partnerFor(PartnerType archetype) {
+  switch (archetype) {
+    case PartnerType.PerfectHusband:
+      return [
+        PartnerType.PerfectHusband,
+        PartnerType.PerfectWife,
+        PartnerType.Provider,
+      ];
+    case PartnerType.PerfectWife:
+      return [
+        PartnerType.PerfectHusband,
+        PartnerType.PerfectWife,
+        PartnerType.Provider,
+      ];
+    case PartnerType.Provider:
+      return [
+        PartnerType.PerfectHusband,
+        PartnerType.PerfectWife,
+        PartnerType.Provider,
+      ];
+    case PartnerType.Polyamorous:
+      return [PartnerType.Polyamorous];
+    case PartnerType.MaleEnergyOvercharge:
+      return [
+        PartnerType.MaleEnergyOvercharge,
+        PartnerType.FemaleEnergyOvercharge,
+        PartnerType.Polyamorous,
+      ];
+    case PartnerType.FemaleEnergyOvercharge:
+      return [
+        PartnerType.MaleEnergyOvercharge,
+        PartnerType.FemaleEnergyOvercharge,
+        PartnerType.Polyamorous,
+      ];
+    case PartnerType.MasculineWife:
+      return [PartnerType.FeminineHusband];
+    case PartnerType.FeminineHusband:
+      return [PartnerType.MasculineWife];
+    case PartnerType.Exploiter:
+      return [];
+  }
 }
 
 PartnerType partnerType(AnimalSynergy synergy, Sex sex) {
@@ -22,8 +65,8 @@ PartnerType partnerType(AnimalSynergy synergy, Sex sex) {
     if (feminineHusband.contains(synergy)) {
       return PartnerType.FeminineHusband;
     }
-    if (maleHealthKiller.contains(synergy)) {
-      return PartnerType.MaleHealthKiller;
+    if (maleEnergyOvercharge.contains(synergy)) {
+      return PartnerType.MaleEnergyOvercharge;
     }
     if (polygamy.contains(synergy)) {
       return PartnerType.Polyamorous;
@@ -41,8 +84,8 @@ PartnerType partnerType(AnimalSynergy synergy, Sex sex) {
   if (masculineWife.contains(synergy)) {
     return PartnerType.MasculineWife;
   }
-  if (femaleHealthKiller.contains(synergy)) {
-    return PartnerType.FemaleHealthKiller;
+  if (femaleEnergyOvercharge.contains(synergy)) {
+    return PartnerType.FemaleEnergyOvercharge;
   }
   if (polygamy.contains(synergy)) {
     return PartnerType.Polyamorous;
@@ -121,12 +164,12 @@ const feminineHusband = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Ox, flavor: Energy.WaterYin)
 ];
 
-const maleHealthKiller = <AnimalSynergy>[
+const maleEnergyOvercharge = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Horse, flavor: Energy.FireYang),
   AnimalSynergy(animal: Animal.Rat, flavor: Energy.WaterYang),
 ];
 
-const femaleHealthKiller = <AnimalSynergy>[
+const femaleEnergyOvercharge = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Snake, flavor: Energy.FireYin),
   AnimalSynergy(animal: Animal.Pig, flavor: Energy.WaterYin),
 ];
