@@ -3,11 +3,7 @@ import '../elements.dart';
 import '../energies.dart';
 
 const notSorted = <AnimalSynergy>[
-  AnimalSynergy(animal: Animal.Tiger, flavor: Energy.WoodYang),
-  AnimalSynergy(animal: Animal.Tiger, flavor: Energy.FireYang),
-  AnimalSynergy(animal: Animal.Tiger, flavor: Energy.EarthYang),
-  AnimalSynergy(animal: Animal.Tiger, flavor: Energy.MetalYang),
-  AnimalSynergy(animal: Animal.Tiger, flavor: Energy.WaterYang),
+  //
   AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.WoodYin),
   AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.FireYin),
   AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.EarthYin),
@@ -63,4 +59,36 @@ const notSorted = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Ox, flavor: Energy.EarthYin),
   AnimalSynergy(animal: Animal.Ox, flavor: Energy.MetalYin),
   AnimalSynergy(animal: Animal.Ox, flavor: Energy.WaterYin)
+];
+
+const perfectHusband = <AnimalSynergy>[
+  AnimalSynergy(animal: Animal.Tiger, flavor: Energy.MetalYang),
+];
+
+const abuserWife = <AnimalSynergy>[
+  AnimalSynergy(animal: Animal.Tiger, flavor: Energy.MetalYang),
+];
+
+const perfectWife = <AnimalSynergy>[
+  AnimalSynergy(animal: Animal.Tiger, flavor: Energy.EarthYang),
+];
+
+const abuserHusband = <AnimalSynergy>[
+  AnimalSynergy(animal: Animal.Tiger, flavor: Energy.EarthYang),
+];
+
+const maleHealthKiller = <AnimalSynergy>[];
+
+const femaleHealthKiller = <AnimalSynergy>[];
+
+const traitor = <AnimalSynergy>[
+  AnimalSynergy(animal: Animal.Tiger, flavor: Energy.WoodYang),
+];
+
+const resourceAbsorbing = <AnimalSynergy>[
+  AnimalSynergy(animal: Animal.Tiger, flavor: Energy.FireYang),
+];
+
+const resourceAbsorbed = <AnimalSynergy>[
+  AnimalSynergy(animal: Animal.Tiger, flavor: Energy.WaterYang),
 ];
