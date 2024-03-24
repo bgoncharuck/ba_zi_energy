@@ -4,11 +4,6 @@ import '../energies.dart';
 
 const notSorted = <AnimalSynergy>[
   //
-  AnimalSynergy(animal: Animal.Horse, flavor: Energy.WoodYang),
-  AnimalSynergy(animal: Animal.Horse, flavor: Energy.FireYang),
-  AnimalSynergy(animal: Animal.Horse, flavor: Energy.EarthYang),
-  AnimalSynergy(animal: Animal.Horse, flavor: Energy.MetalYang),
-  AnimalSynergy(animal: Animal.Horse, flavor: Energy.WaterYang),
   AnimalSynergy(animal: Animal.Goat, flavor: Energy.WoodYin),
   AnimalSynergy(animal: Animal.Goat, flavor: Energy.FireYin),
   AnimalSynergy(animal: Animal.Goat, flavor: Energy.EarthYin),
@@ -52,6 +47,7 @@ const perfectHusband = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Dragon, flavor: Energy.WoodYang),
   AnimalSynergy(animal: Animal.Snake, flavor: Energy.FireYin),
   AnimalSynergy(animal: Animal.Snake, flavor: Energy.WaterYin),
+  AnimalSynergy(animal: Animal.Horse, flavor: Energy.WaterYang),
 ];
 
 const masculineWife = <AnimalSynergy>[
@@ -59,6 +55,7 @@ const masculineWife = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.MetalYin),
   AnimalSynergy(animal: Animal.Dragon, flavor: Energy.WoodYang),
   AnimalSynergy(animal: Animal.Snake, flavor: Energy.WaterYin),
+  AnimalSynergy(animal: Animal.Horse, flavor: Energy.WaterYang),
 ];
 
 const perfectWife = <AnimalSynergy>[
@@ -66,6 +63,8 @@ const perfectWife = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.EarthYin),
   AnimalSynergy(animal: Animal.Dragon, flavor: Energy.WaterYang),
   AnimalSynergy(animal: Animal.Snake, flavor: Energy.MetalYin),
+  AnimalSynergy(animal: Animal.Horse, flavor: Energy.FireYang),
+  AnimalSynergy(animal: Animal.Horse, flavor: Energy.MetalYang),
 ];
 
 const feminineHusband = <AnimalSynergy>[
@@ -73,9 +72,12 @@ const feminineHusband = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.EarthYin),
   AnimalSynergy(animal: Animal.Dragon, flavor: Energy.WaterYang),
   AnimalSynergy(animal: Animal.Snake, flavor: Energy.MetalYin),
+  AnimalSynergy(animal: Animal.Horse, flavor: Energy.MetalYang),
 ];
 
-const maleHealthKiller = <AnimalSynergy>[];
+const maleHealthKiller = <AnimalSynergy>[
+  AnimalSynergy(animal: Animal.Horse, flavor: Energy.FireYang),
+];
 
 const femaleHealthKiller = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Snake, flavor: Energy.FireYin),
@@ -92,6 +94,7 @@ const exploiter = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.FireYin),
   AnimalSynergy(animal: Animal.Dragon, flavor: Energy.MetalYang),
   AnimalSynergy(animal: Animal.Snake, flavor: Energy.WoodYin),
+  AnimalSynergy(animal: Animal.Horse, flavor: Energy.WoodYang),
 ];
 
 const provider = <AnimalSynergy>[
@@ -99,4 +102,5 @@ const provider = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.WaterYin),
   AnimalSynergy(animal: Animal.Dragon, flavor: Energy.FireYang),
   AnimalSynergy(animal: Animal.Snake, flavor: Energy.EarthYin),
+  AnimalSynergy(animal: Animal.Horse, flavor: Energy.EarthYang),
 ];
