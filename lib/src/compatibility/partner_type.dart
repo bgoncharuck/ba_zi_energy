@@ -53,7 +53,7 @@ List<PartnerType> partnerFor(PartnerType archetype) {
     case PartnerType.FeminineHusband:
       return [PartnerType.MasculineWife];
     case PartnerType.Exploiter:
-      return [];
+      return [PartnerType.Exploiter];
   }
 }
 
