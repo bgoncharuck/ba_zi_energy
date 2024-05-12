@@ -17,51 +17,39 @@ enum Animal {
 
   Energy get energy {
     switch (this) {
-      /// a boy
       case Animal.Tiger:
         return Energy.WoodYang;
 
-      /// a girl
       case Animal.Rabbit:
         return Energy.WoodYin;
 
-      /// between Fire and Earth
       case Animal.Dragon:
         return Energy.EarthYang;
 
-      /// between Fire and Metal
       case Animal.Snake:
         return Energy.FireYin;
 
-      /// Despite being Yang, corresponds to female sexuality
       case Animal.Horse:
         return Energy.FireYang;
 
-      /// wife
       case Animal.Goat:
         return Energy.EarthYin;
 
-      /// rebel
       case Animal.Monkey:
         return Energy.MetalYang;
 
-      /// noble
       case Animal.Rooster:
         return Energy.MetalYin;
 
-      /// between Metal and Earth
       case Animal.Dog:
         return Energy.EarthYang;
 
-      /// witch
       case Animal.Pig:
         return Energy.WaterYin;
 
-      /// businessman
       case Animal.Rat:
         return Energy.WaterYang;
 
-      /// Despite being Yin, corresponds to male sexuality
       case Animal.Ox:
         return Energy.EarthYin;
 
@@ -75,29 +63,29 @@ enum Animal {
   String get western {
     switch (this) {
       case Animal.Tiger:
-        return 'aquarius';
-      case Animal.Rabbit:
         return 'pisces';
-      case Animal.Dragon:
+      case Animal.Rabbit:
         return 'aries';
-      case Animal.Snake:
+      case Animal.Dragon:
         return 'taurus';
-      case Animal.Horse:
+      case Animal.Snake:
         return 'gemini';
-      case Animal.Goat:
+      case Animal.Horse:
         return 'cancer';
-      case Animal.Monkey:
+      case Animal.Goat:
         return 'leo';
-      case Animal.Rooster:
+      case Animal.Monkey:
         return 'virgo';
-      case Animal.Dog:
+      case Animal.Rooster:
         return 'libra';
-      case Animal.Pig:
+      case Animal.Dog:
         return 'scorpio';
-      case Animal.Rat:
+      case Animal.Pig:
         return 'sagittarius';
-      case Animal.Ox:
+      case Animal.Rat:
         return 'capricorn';
+      case Animal.Ox:
+        return 'aquarius';
       default:
         throw ArgumentError('Invalid animal: $this');
     }
