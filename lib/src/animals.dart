@@ -63,29 +63,29 @@ enum Animal {
   String get western {
     switch (this) {
       case Animal.Tiger:
-        return 'pisces';
-      case Animal.Rabbit:
-        return 'aries';
-      case Animal.Dragon:
-        return 'taurus';
-      case Animal.Snake:
-        return 'gemini';
-      case Animal.Horse:
-        return 'cancer';
-      case Animal.Goat:
-        return 'leo';
-      case Animal.Monkey:
-        return 'virgo';
-      case Animal.Rooster:
-        return 'libra';
-      case Animal.Dog:
-        return 'scorpio';
-      case Animal.Pig:
-        return 'sagittarius';
-      case Animal.Rat:
-        return 'capricorn';
-      case Animal.Ox:
         return 'aquarius';
+      case Animal.Rabbit:
+        return 'pisces';
+      case Animal.Dragon:
+        return 'aries';
+      case Animal.Snake:
+        return 'taurus';
+      case Animal.Horse:
+        return 'gemini';
+      case Animal.Goat:
+        return 'cancer';
+      case Animal.Monkey:
+        return 'leo';
+      case Animal.Rooster:
+        return 'virgo';
+      case Animal.Dog:
+        return 'libra';
+      case Animal.Pig:
+        return 'scorpio';
+      case Animal.Rat:
+        return 'sagittarius';
+      case Animal.Ox:
+        return 'capricorn';
       default:
         throw ArgumentError('Invalid animal: $this');
     }
