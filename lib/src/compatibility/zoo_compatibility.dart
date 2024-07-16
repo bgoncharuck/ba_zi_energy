@@ -26,7 +26,7 @@ AnimalPairType pairTypeOf(Animal first, Animal second) {
   if (rapePunishment[first]?.contains(second) ?? false) {
     return AnimalPairType.rapePunishment;
   }
-  if (Animal.values.forward(first, 6) == second) {
+  if (enemyOf(first) == second) {
     return AnimalPairType.enemy;
   }
   if (sixHarmonies[first] == second) {
@@ -88,6 +88,24 @@ const sixHarmonies = <Animal, Animal>{
   Animal.Rat: Animal.Ox,
   Animal.Ox: Animal.Rat
 };
+
+Set<Animal> punishmentFor(Animal animal) {
+  return {
+    ...selfPunishment[animal] ?? {},
+    ...ungratefulPunishment[animal] ?? {},
+    ...bullyingPunishment[animal] ?? {},
+    ...rapePunishment[animal] ?? {},
+  };
+}
+
+bool isPunishment(AnimalPairType pairType) {
+  return pairType == AnimalPairType.rapePunishment ||
+      pairType == AnimalPairType.bullyingPunishment ||
+      pairType == AnimalPairType.ungratefulPunishment ||
+      pairType == AnimalPairType.selfPunishment;
+}
+
+Animal enemyOf(Animal animal) => Animal.values.forward(animal, 6);
 
 Set<Animal> avoidFor(Animal animal) {
   return {
