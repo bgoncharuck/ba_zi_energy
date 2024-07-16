@@ -2,9 +2,9 @@ import '../exts.dart';
 import '../animals.dart';
 
 enum AnimalPairType {
+  fusion,
   lover,
   friend,
-  friendOfAFriend,
   neutral,
   rapePunishment,
   ungratefulPunishment,
@@ -30,13 +30,13 @@ AnimalPairType pairTypeOf(Animal first, Animal second) {
     return AnimalPairType.enemy;
   }
   if (sixHarmonies[first] == second) {
-    return AnimalPairType.lover;
+    return AnimalPairType.fusion;
   }
   if (harmonyFor(first).contains(second)) {
-    return AnimalPairType.friend;
+    return AnimalPairType.lover;
   }
-  if (harmonyForLover(first).contains(second)) {
-    return AnimalPairType.friendOfAFriend;
+  if (harmonyForFusion(first).contains(second)) {
+    return AnimalPairType.friend;
   }
   return AnimalPairType.neutral;
 }
@@ -51,7 +51,7 @@ Set<Animal> harmonyFor(Animal animal) {
   };
 }
 
-Set<Animal> harmonyForLover(Animal animal) {
+Set<Animal> harmonyForFusion(Animal animal) {
   return harmonyFor(sixHarmonies[animal]!)..remove(animal);
 }
 
