@@ -47,7 +47,7 @@ const bullyingPunishment = <Animal, Set<Animal>>{
   Animal.Ox: {Animal.Goat, Animal.Dog},
 };
 
-const rapePunishment = <Animal, Set<Animal>>{
+const taintPunishment = <Animal, Set<Animal>>{
   Animal.Rat: {Animal.Rabbit},
   Animal.Rabbit: {Animal.Rat},
 };
@@ -61,7 +61,7 @@ enum AnimalPairType {
   selfPunishment,
   ungratefulPunishment,
   bullyingPunishment,
-  rapePunishment,
+  taintPunishment,
 }
 
 Set<Animal> teammatesOf(Animal animal) {
@@ -81,7 +81,7 @@ bool isPunishment(AnimalPairType pairType) {
   return pairType == AnimalPairType.selfPunishment ||
       pairType == AnimalPairType.ungratefulPunishment ||
       pairType == AnimalPairType.bullyingPunishment ||
-      pairType == AnimalPairType.rapePunishment;
+      pairType == AnimalPairType.taintPunishment;
 }
 
 Animal rivalOf(Animal animal) => Animal.values.forward(animal, 6);
@@ -91,7 +91,7 @@ Set<Animal> hostileTo(Animal animal) {
     ...selfPunishment[animal] ?? {},
     ...ungratefulPunishment[animal] ?? {},
     ...bullyingPunishment[animal] ?? {},
-    ...rapePunishment[animal] ?? {},
+    ...taintPunishment[animal] ?? {},
   };
 }
 
@@ -105,8 +105,8 @@ AnimalPairType pairTypeOf(Animal first, Animal second) {
   if (bullyingPunishment[first]?.contains(second) ?? false) {
     return AnimalPairType.bullyingPunishment;
   }
-  if (rapePunishment[first]?.contains(second) ?? false) {
-    return AnimalPairType.rapePunishment;
+  if (taintPunishment[first]?.contains(second) ?? false) {
+    return AnimalPairType.taintPunishment;
   }
   if (rivalOf(first) == second) {
     return AnimalPairType.tension;
