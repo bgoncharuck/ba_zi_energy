@@ -52,7 +52,7 @@ Set<Animal> harmonyFor(Animal animal) {
 }
 
 Set<Animal> harmonyForLover(Animal animal) {
-  return harmonyFor(sixHarmonies[animal]!);
+  return harmonyFor(sixHarmonies[animal]!)..remove(animal);
 }
 
 Set<Animal> problematicForZoo(Set<Animal> animals) => {
