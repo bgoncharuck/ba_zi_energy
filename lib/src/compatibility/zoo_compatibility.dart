@@ -4,6 +4,7 @@ import '../animals.dart';
 enum AnimalPairType {
   lover,
   friend,
+  friendOfAFriend,
   neutral,
   rapePunishment,
   ungratefulPunishment,
@@ -34,6 +35,9 @@ AnimalPairType pairTypeOf(Animal first, Animal second) {
   if (harmonyFor(first).contains(second)) {
     return AnimalPairType.friend;
   }
+  if (harmonyForLover(first).contains(second)) {
+    return AnimalPairType.friendOfAFriend;
+  }
   return AnimalPairType.neutral;
 }
 
@@ -45,6 +49,10 @@ Set<Animal> harmonyFor(Animal animal) {
     if (artists.contains(animal)) ...(artists..remove(animal)),
     sixHarmonies[animal]!,
   };
+}
+
+Set<Animal> harmonyForLover(Animal animal) {
+  return harmonyFor(sixHarmonies[animal]!);
 }
 
 Set<Animal> problematicForZoo(Set<Animal> animals) => {
