@@ -1,12 +1,12 @@
 import '../exts.dart';
 import '../animals.dart';
 
-/// 4 групи.
-/// Всередині групи ніжність.
-/// У дружній групі, одна пристрасть, дві симпатії.
+// 4 groups.
+// Within the group, there is tenderness.
+// In a friendly group, one passion, two sympathies.
 
-/// Далі, в кожного знака серед двох інших груп є напруга та ворожість.
-/// Є 4 особливі знаки, в яких ворожість це власний знак.
+// Further, for each sign among the two other groups, there is tension and hostility.
+// There are 4 special signs, for which the hostility is their own sign.
 
 enum AnimalPairType {
   fusion,
