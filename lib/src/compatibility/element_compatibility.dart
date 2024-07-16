@@ -10,6 +10,10 @@ ElementPair pairTypeOf(Energy first, Energy second) {
   if (fusion[first] == second) {
     return ElementPair.fusion;
   }
+  if (conflict[first] == second) {
+    return ElementPair.conflict;
+  }
+  return ElementPair.neutral;
 }
 
 const fusion = <Energy, Energy>{
@@ -23,4 +27,17 @@ const fusion = <Energy, Energy>{
   Energy.WoodYin: Energy.MetalYang,
   Energy.FireYang: Energy.MetalYin,
   Energy.MetalYin: Energy.FireYang,
+};
+
+const conflict = <Energy, Energy>{
+  Energy.MetalYang: Energy.WoodYang,
+  Energy.WoodYang: Energy.MetalYang,
+  Energy.MetalYin: Energy.WoodYin,
+  Energy.WoodYin: Energy.MetalYin,
+  Energy.FireYang: Energy.WaterYang,
+  Energy.WaterYang: Energy.FireYang,
+  Energy.WaterYin: Energy.FireYin,
+  Energy.FireYin: Energy.WaterYin,
+  Energy.EarthYin: Energy.EarthYin,
+  Energy.EarthYang: Energy.EarthYang,
 };
