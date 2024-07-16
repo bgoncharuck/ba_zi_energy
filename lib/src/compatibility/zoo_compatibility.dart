@@ -2,84 +2,16 @@ import '../exts.dart';
 import '../animals.dart';
 
 // 4 groups.
-// Within the group, there is tenderness.
+// Within the group, there is harmony.
 // In a friendly group, one passion, two sympathies.
 
 // Further, for each sign among the two other groups, there is tension and hostility.
 // There are 4 special signs, for which the hostility is their own sign.
 
-enum AnimalPairType {
-  fusion,
-  lover,
-  friend,
-  neutral,
-  rapePunishment,
-  ungratefulPunishment,
-  selfPunishment,
-  bullyingPunishment,
-  enemy,
-}
-
-AnimalPairType pairTypeOf(Animal first, Animal second) {
-  if (first == second && selfPunishment.keys.contains(first)) {
-    return AnimalPairType.selfPunishment;
-  }
-  if (ungratefulPunishment[first]?.contains(second) ?? false) {
-    return AnimalPairType.ungratefulPunishment;
-  }
-  if (bullyingPunishment[first]?.contains(second) ?? false) {
-    return AnimalPairType.bullyingPunishment;
-  }
-  if (rapePunishment[first]?.contains(second) ?? false) {
-    return AnimalPairType.rapePunishment;
-  }
-  if (enemyOf(first) == second) {
-    return AnimalPairType.enemy;
-  }
-  if (sixHarmonies[first] == second) {
-    return AnimalPairType.fusion;
-  }
-  if (harmonyFor(first).contains(second)) {
-    return AnimalPairType.lover;
-  }
-  if (harmonyForFusion(first).contains(second)) {
-    return AnimalPairType.friend;
-  }
-  return AnimalPairType.neutral;
-}
-
-Set<Animal> harmonyFor(Animal animal) {
-  return {
-    if (clergy.contains(animal)) ...(clergy..remove(animal)),
-    if (warriors.contains(animal)) ...(warriors..remove(animal)),
-    if (traders.contains(animal)) ...(traders..remove(animal)),
-    if (artists.contains(animal)) ...(artists..remove(animal)),
-    sixHarmonies[animal]!,
-  };
-}
-
-Set<Animal> harmonyForFusion(Animal animal) {
-  return harmonyFor(sixHarmonies[animal]!)..remove(animal);
-}
-
-Set<Animal> problematicForZoo(Set<Animal> animals) => {
-      for (final animal in animals) ...avoidFor(animal),
-    };
-
-Set<Animal> possiblePairsForZoo(Set<Animal> animals) {
-  return Animal.values.toSet().difference(
-        problematicForZoo(animals),
-      );
-}
-
-Set<Animal> possiblePairsFor(Animal animal) {
-  return Animal.values.toSet().difference(avoidFor(animal));
-}
-
-Set<Animal> get clergy => {Animal.Pig, Animal.Rabbit, Animal.Goat};
+Set<Animal> get shamans => {Animal.Pig, Animal.Rabbit, Animal.Goat};
 Set<Animal> get warriors => {Animal.Dragon, Animal.Monkey, Animal.Rat};
 Set<Animal> get traders => {Animal.Snake, Animal.Rooster, Animal.Ox};
-Set<Animal> get artists => {Animal.Horse, Animal.Dog, Animal.Tiger};
+Set<Animal> get creators => {Animal.Horse, Animal.Dog, Animal.Tiger};
 
 const sixHarmonies = <Animal, Animal>{
   Animal.Tiger: Animal.Pig,
@@ -95,34 +27,6 @@ const sixHarmonies = <Animal, Animal>{
   Animal.Rat: Animal.Ox,
   Animal.Ox: Animal.Rat
 };
-
-Set<Animal> punishmentFor(Animal animal) {
-  return {
-    ...selfPunishment[animal] ?? {},
-    ...ungratefulPunishment[animal] ?? {},
-    ...bullyingPunishment[animal] ?? {},
-    ...rapePunishment[animal] ?? {},
-  };
-}
-
-bool isPunishment(AnimalPairType pairType) {
-  return pairType == AnimalPairType.rapePunishment ||
-      pairType == AnimalPairType.bullyingPunishment ||
-      pairType == AnimalPairType.ungratefulPunishment ||
-      pairType == AnimalPairType.selfPunishment;
-}
-
-Animal enemyOf(Animal animal) => Animal.values.forward(animal, 6);
-
-Set<Animal> avoidFor(Animal animal) {
-  return {
-    ...selfPunishment[animal] ?? {},
-    ...ungratefulPunishment[animal] ?? {},
-    ...bullyingPunishment[animal] ?? {},
-    ...rapePunishment[animal] ?? {},
-    Animal.values.forward(animal, 6),
-  };
-}
 
 const selfPunishment = <Animal, Set<Animal>>{
   Animal.Dragon: {Animal.Dragon},
@@ -147,3 +51,74 @@ const rapePunishment = <Animal, Set<Animal>>{
   Animal.Rat: {Animal.Rabbit},
   Animal.Rabbit: {Animal.Rat},
 };
+
+enum AnimalPairType {
+  passion,
+  harmony,
+  sympathy,
+  neutral,
+  tension,
+  selfPunishment,
+  ungratefulPunishment,
+  bullyingPunishment,
+  rapePunishment,
+}
+
+Set<Animal> teammatesOf(Animal animal) {
+  return {
+    if (shamans.contains(animal)) ...(shamans..remove(animal)),
+    if (warriors.contains(animal)) ...(warriors..remove(animal)),
+    if (traders.contains(animal)) ...(traders..remove(animal)),
+    if (creators.contains(animal)) ...(creators..remove(animal)),
+  };
+}
+
+Set<Animal> teammatesOfLover(Animal animal) {
+  return teammatesOf(sixHarmonies[animal]!)..remove(animal);
+}
+
+bool isPunishment(AnimalPairType pairType) {
+  return pairType == AnimalPairType.selfPunishment ||
+      pairType == AnimalPairType.ungratefulPunishment ||
+      pairType == AnimalPairType.bullyingPunishment ||
+      pairType == AnimalPairType.rapePunishment;
+}
+
+Animal rivalOf(Animal animal) => Animal.values.forward(animal, 6);
+
+Set<Animal> hostileTo(Animal animal) {
+  return {
+    ...selfPunishment[animal] ?? {},
+    ...ungratefulPunishment[animal] ?? {},
+    ...bullyingPunishment[animal] ?? {},
+    ...rapePunishment[animal] ?? {},
+  };
+}
+
+AnimalPairType pairTypeOf(Animal first, Animal second) {
+  if (first == second && selfPunishment.keys.contains(first)) {
+    return AnimalPairType.selfPunishment;
+  }
+  if (ungratefulPunishment[first]?.contains(second) ?? false) {
+    return AnimalPairType.ungratefulPunishment;
+  }
+  if (bullyingPunishment[first]?.contains(second) ?? false) {
+    return AnimalPairType.bullyingPunishment;
+  }
+  if (rapePunishment[first]?.contains(second) ?? false) {
+    return AnimalPairType.rapePunishment;
+  }
+  if (rivalOf(first) == second) {
+    return AnimalPairType.tension;
+  }
+  if (sixHarmonies[first] == second) {
+    return AnimalPairType.passion;
+  }
+  if (teammatesOf(first).contains(second)) {
+    return AnimalPairType.harmony;
+  }
+  if (teammatesOfLover(first).contains(second)) {
+    return AnimalPairType.sympathy;
+  }
+  return AnimalPairType.neutral;
+}
