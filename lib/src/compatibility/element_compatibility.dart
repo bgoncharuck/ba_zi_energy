@@ -6,7 +6,7 @@ enum ElementPair {
   conflict,
 }
 
-ElementPair pairTypeOf(Energy first, Energy second) {
+ElementPair elementFusionTry(Energy first, Energy second) {
   if (fusion[first] == second) {
     return ElementPair.fusion;
   }
