@@ -13,6 +13,11 @@ Set<Animal> get warriors => {Animal.Dragon, Animal.Monkey, Animal.Rat};
 Set<Animal> get traders => {Animal.Snake, Animal.Rooster, Animal.Ox};
 Set<Animal> get creators => {Animal.Horse, Animal.Dog, Animal.Tiger};
 
+Set<Animal> get spring => {Animal.Tiger, Animal.Rabbit, Animal.Dragon};
+Set<Animal> get summer => {Animal.Snake, Animal.Horse, Animal.Goat};
+Set<Animal> get autumn => {Animal.Monkey, Animal.Rooster, Animal.Dog};
+Set<Animal> get winter => {Animal.Pig, Animal.Rat, Animal.Ox};
+
 const sixHarmonies = <Animal, Animal>{
   Animal.Tiger: Animal.Pig,
   Animal.Rabbit: Animal.Dog,
