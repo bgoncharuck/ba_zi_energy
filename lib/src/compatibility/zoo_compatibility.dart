@@ -75,6 +75,10 @@ Set<Animal> teammatesOf(Animal animal) {
     if (warriors.contains(animal)) ...(warriors..remove(animal)),
     if (traders.contains(animal)) ...(traders..remove(animal)),
     if (creators.contains(animal)) ...(creators..remove(animal)),
+    if (spring.contains(animal)) ...(spring..remove(animal)),
+    if (summer.contains(animal)) ...(summer..remove(animal)),
+    if (autumn.contains(animal)) ...(autumn..remove(animal)),
+    if (winter.contains(animal)) ...(winter..remove(animal)),
   };
 }
 
