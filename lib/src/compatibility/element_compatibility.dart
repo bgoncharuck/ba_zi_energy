@@ -17,7 +17,7 @@ ElementPair elementFusionTry(Energy first, Energy second) {
 }
 
 const fusion = <Energy, Energy>{
-  Energy.WaterYang: Energy.EarthYin,
+  Energy.WaterYang: Energy.FireYin,
   Energy.FireYin: Energy.WaterYang,
   Energy.EarthYang: Energy.WaterYin,
   Energy.WaterYin: Energy.EarthYang,
