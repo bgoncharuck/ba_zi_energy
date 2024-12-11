@@ -174,3 +174,55 @@ Set<AnimalSynergy> createAnimalSet(Set<Animal> animals, Set<Element> elements) {
         ),
   };
 }
+
+const energyToAnimal = <Energy, Animal>{
+  Energy.WaterYang: Animal.Rat,
+  Energy.WaterYin: Animal.Pig,
+  Energy.WoodYang: Animal.Tiger,
+  Energy.WoodYin: Animal.Rabbit,
+  Energy.FireYang: Animal.Horse,
+  Energy.FireYin: Animal.Snake,
+  Energy.EarthYang: Animal.Dragon,
+  Energy.EarthYin: Animal.Ox,
+  Energy.MetalYang: Animal.Monkey,
+  Energy.MetalYin: Animal.Rooster,
+};
+
+const additionalMaleEarth = Animal.Dog;
+const additionalFemaleEarth = Animal.Goat;
+
+Element seasonOfYear(Animal animal) {
+  switch (animal) {
+    case Animal.Tiger:
+    case Animal.Rabbit:
+    case Animal.Dragon:
+      return Element.Wood;
+    case Animal.Snake:
+    case Animal.Horse:
+    case Animal.Goat:
+      return Element.Fire;
+    case Animal.Monkey:
+    case Animal.Rooster:
+    case Animal.Dog:
+      return Element.Earth;
+    case Animal.Pig:
+    case Animal.Rat:
+    case Animal.Ox:
+      return Element.Water;
+  }
+}
+
+const Map<Animal, List<Energy>> hiddenAnimalEnergies = {
+  Animal.Tiger: [Energy.WoodYang, Energy.FireYang, Energy.EarthYang],
+  Animal.Rabbit: [Energy.WoodYin],
+  Animal.Dragon: [Energy.EarthYang, Energy.WoodYin, Energy.WaterYin],
+  Animal.Snake: [Energy.FireYang, Energy.MetalYang, Energy.EarthYang],
+  Animal.Horse: [Energy.FireYin, Energy.EarthYin],
+  Animal.Goat: [Energy.EarthYin, Energy.FireYin, Energy.WoodYin],
+  Animal.Monkey: [Energy.MetalYang, Energy.WaterYang, Energy.EarthYang],
+  Animal.Rooster: [Energy.MetalYin],
+  Animal.Dog: [Energy.EarthYang, Energy.MetalYin, Energy.FireYin],
+  Animal.Pig: [Energy.WaterYang, Energy.WoodYang],
+  Animal.Rat: [Energy.WaterYin],
+  Animal.Ox: [Energy.EarthYin, Energy.WaterYin, Energy.MetalYin],
+};

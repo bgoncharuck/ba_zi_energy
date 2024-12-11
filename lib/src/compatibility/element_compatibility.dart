@@ -29,6 +29,19 @@ const fusion = <Energy, Energy>{
   Energy.MetalYin: Energy.FireYang,
 };
 
+const fusionResult = <Energy, Element>{
+  Energy.WaterYang: Element.Wood,
+  Energy.FireYin: Element.Wood,
+  Energy.EarthYang: Element.Fire,
+  Energy.WaterYin: Element.Fire,
+  Energy.WoodYang: Element.Earth,
+  Energy.EarthYin: Element.Earth,
+  Energy.MetalYang: Element.Metal,
+  Energy.WoodYin: Element.Metal,
+  Energy.FireYang: Element.Water,
+  Energy.MetalYin: Element.Water,
+};
+
 const conflict = <Energy, Energy>{
   Energy.MetalYang: Energy.WoodYang,
   Energy.WoodYang: Energy.MetalYang,
