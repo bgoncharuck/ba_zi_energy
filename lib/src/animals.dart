@@ -226,3 +226,48 @@ const Map<Animal, List<Energy>> hiddenAnimalEnergies = {
   Animal.Rat: [Energy.WaterYin],
   Animal.Ox: [Energy.EarthYin, Energy.WaterYin, Energy.MetalYin],
 };
+
+const Map<Animal, Animal> nextAnimal = {
+  Animal.Tiger: Animal.Rabbit,
+  Animal.Rabbit: Animal.Dragon,
+  Animal.Dragon: Animal.Snake,
+  Animal.Snake: Animal.Horse,
+  Animal.Horse: Animal.Goat,
+  Animal.Goat: Animal.Monkey,
+  //
+  Animal.Monkey: Animal.Rooster,
+  Animal.Rooster: Animal.Dog,
+  Animal.Dog: Animal.Pig,
+  Animal.Pig: Animal.Rat,
+  Animal.Rat: Animal.Ox,
+  Animal.Ox: Animal.Tiger,
+};
+
+const Map<Animal, Animal> previousAnimal = {
+  Animal.Tiger: Animal.Ox,
+  Animal.Rabbit: Animal.Tiger,
+  Animal.Dragon: Animal.Rabbit,
+  Animal.Snake: Animal.Dragon,
+  Animal.Horse: Animal.Snake,
+  Animal.Goat: Animal.Horse,
+  //
+  Animal.Monkey: Animal.Goat,
+  Animal.Rooster: Animal.Monkey,
+  Animal.Dog: Animal.Rooster,
+  Animal.Pig: Animal.Dog,
+  Animal.Rat: Animal.Pig,
+  Animal.Ox: Animal.Rat,
+};
+
+AnimalSynergy nextSynergy(AnimalSynergy synergy) {
+  return AnimalSynergy(
+    animal: nextAnimal[synergy.animal]!,
+    flavor: nextEnergy[synergy.flavor]!,
+  );
+}
+
+AnimalSynergy previousSynergy(AnimalSynergy synergy) {
+  return AnimalSynergy(
+      animal: previousAnimal[synergy.animal]!,
+      flavor: previousEnergy[synergy.flavor]!);
+}

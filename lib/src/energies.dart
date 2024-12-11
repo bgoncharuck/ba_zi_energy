@@ -30,6 +30,34 @@ enum Energy {
   }
 }
 
+const Map<Energy, Energy> nextEnergy = {
+  Energy.FireYang: Energy.FireYin,
+  Energy.FireYin: Energy.EarthYang,
+  Energy.EarthYang: Energy.EarthYin,
+  Energy.EarthYin: Energy.MetalYang,
+  Energy.MetalYang: Energy.MetalYin,
+  //
+  Energy.MetalYin: Energy.WaterYang,
+  Energy.WaterYang: Energy.WaterYin,
+  Energy.WaterYin: Energy.WoodYang,
+  Energy.WoodYang: Energy.WoodYin,
+  Energy.WoodYin: Energy.FireYang,
+};
+
+const Map<Energy, Energy> previousEnergy = {
+  Energy.FireYang: Energy.WoodYin,
+  Energy.FireYin: Energy.FireYang,
+  Energy.EarthYang: Energy.FireYin,
+  Energy.EarthYin: Energy.EarthYang,
+  Energy.MetalYang: Energy.EarthYin,
+  //
+  Energy.MetalYin: Energy.MetalYang,
+  Energy.WaterYang: Energy.MetalYin,
+  Energy.WaterYin: Energy.WaterYang,
+  Energy.WoodYang: Energy.WaterYin,
+  Energy.WoodYin: Energy.WoodYang,
+};
+
 class Synergy {
   const Synergy(this.first, this.second);
   final Energy first;
