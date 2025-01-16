@@ -8,10 +8,10 @@ import '../animals.dart';
 // Further, for each sign among the two other groups, there is tension and hostility.
 // There are 4 special signs, for which the hostility is their own sign.
 
-Set<Animal> get shamans => {Animal.Pig, Animal.Rabbit, Animal.Goat};
-Set<Animal> get warriors => {Animal.Dragon, Animal.Monkey, Animal.Rat};
-Set<Animal> get traders => {Animal.Snake, Animal.Rooster, Animal.Ox};
-Set<Animal> get creators => {Animal.Horse, Animal.Dog, Animal.Tiger};
+Set<Animal> get mages => {Animal.Pig, Animal.Rabbit, Animal.Goat};
+Set<Animal> get rebels => {Animal.Dragon, Animal.Monkey, Animal.Rat};
+Set<Animal> get nobles => {Animal.Snake, Animal.Rooster, Animal.Ox};
+Set<Animal> get governors => {Animal.Horse, Animal.Dog, Animal.Tiger};
 
 Set<Animal> get spring => {Animal.Tiger, Animal.Rabbit, Animal.Dragon};
 Set<Animal> get summer => {Animal.Snake, Animal.Horse, Animal.Goat};
@@ -71,10 +71,10 @@ enum AnimalPairType {
 
 Set<Animal> teammatesOf(Animal animal) {
   return {
-    if (shamans.contains(animal)) ...(shamans..remove(animal)),
-    if (warriors.contains(animal)) ...(warriors..remove(animal)),
-    if (traders.contains(animal)) ...(traders..remove(animal)),
-    if (creators.contains(animal)) ...(creators..remove(animal)),
+    if (mages.contains(animal)) ...(mages..remove(animal)),
+    if (rebels.contains(animal)) ...(rebels..remove(animal)),
+    if (nobles.contains(animal)) ...(nobles..remove(animal)),
+    if (governors.contains(animal)) ...(governors..remove(animal)),
     if (spring.contains(animal)) ...(spring..remove(animal)),
     if (summer.contains(animal)) ...(summer..remove(animal)),
     if (autumn.contains(animal)) ...(autumn..remove(animal)),
