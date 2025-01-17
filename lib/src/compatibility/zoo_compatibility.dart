@@ -8,10 +8,10 @@ import '../animals.dart';
 // Further, for each sign among the two other groups, there is tension and hostility.
 // There are 4 special signs, for which the hostility is their own sign.
 
-Set<Animal> get anarchy => {Animal.Pig, Animal.Rabbit, Animal.Goat};
+Set<Animal> get innovation => {Animal.Pig, Animal.Rabbit, Animal.Goat};
 Set<Animal> get authority => {Animal.Dragon, Animal.Monkey, Animal.Rat};
 Set<Animal> get tradition => {Animal.Snake, Animal.Rooster, Animal.Ox};
-Set<Animal> get innovation => {Animal.Horse, Animal.Dog, Animal.Tiger};
+Set<Animal> get anarchy => {Animal.Horse, Animal.Dog, Animal.Tiger};
 
 Set<Animal> get spring => {Animal.Tiger, Animal.Rabbit, Animal.Dragon};
 Set<Animal> get summer => {Animal.Snake, Animal.Horse, Animal.Goat};
