@@ -18,7 +18,7 @@ List<Animal> animalCalculationsOrder = [
 
 DateTime yearStart(int year) {
   if (isValidYear(year)) {
-    return yearStarts[year]!.toDateTime().subtract(const Duration(hours: 4));
+    return yearStarts[year]!.toDateTime().add(const Duration(hours: 16));
   }
   return DateTime(year, 2, 5);
 }
