@@ -59,41 +59,65 @@ List<PartnerType> partnerFor(PartnerType archetype) {
 
 PartnerType partnerType(AnimalSynergy synergy, Sex sex) {
   if (sex == Sex.Yang) {
-    if (perfectHusband.contains(synergy)) {
+    if (perfectHusband.any(
+      (e) => e.animal == synergy.animal && e.flavor == synergy.flavor,
+    )) {
       return PartnerType.PerfectHusband;
     }
-    if (feminineHusband.contains(synergy)) {
+    if (feminineHusband.any(
+      (e) => e.animal == synergy.animal && e.flavor == synergy.flavor,
+    )) {
       return PartnerType.FeminineHusband;
     }
-    if (maleEnergyOvercharge.contains(synergy)) {
+    if (maleEnergyOvercharge.any(
+      (e) => e.animal == synergy.animal && e.flavor == synergy.flavor,
+    )) {
       return PartnerType.MaleEnergyOvercharge;
     }
-    if (polygamy.contains(synergy)) {
+    if (polygamy.any(
+      (e) => e.animal == synergy.animal && e.flavor == synergy.flavor,
+    )) {
       return PartnerType.Polyamorous;
     }
-    if (exploiter.contains(synergy)) {
+    if (exploiter.any(
+      (e) => e.animal == synergy.animal && e.flavor == synergy.flavor,
+    )) {
       return PartnerType.Exploiter;
     }
-    if (provider.contains(synergy)) {
+    if (provider.any(
+      (e) => e.animal == synergy.animal && e.flavor == synergy.flavor,
+    )) {
       return PartnerType.Provider;
     }
   }
-  if (perfectWife.contains(synergy)) {
+  if (perfectWife.any(
+    (e) => e.animal == synergy.animal && e.flavor == synergy.flavor,
+  )) {
     return PartnerType.PerfectWife;
   }
-  if (masculineWife.contains(synergy)) {
+  if (masculineWife.any(
+    (e) => e.animal == synergy.animal && e.flavor == synergy.flavor,
+  )) {
     return PartnerType.MasculineWife;
   }
-  if (femaleEnergyOvercharge.contains(synergy)) {
+  if (femaleEnergyOvercharge.any(
+    (e) => e.animal == synergy.animal && e.flavor == synergy.flavor,
+  )) {
     return PartnerType.FemaleEnergyOvercharge;
   }
-  if (polygamy.contains(synergy)) {
+  if (polygamy.any(
+    (e) => e.animal == synergy.animal && e.flavor == synergy.flavor,
+  )) {
     return PartnerType.Polyamorous;
   }
-  if (exploiter.contains(synergy)) {
+  if (exploiter.any(
+    (e) => e.animal == synergy.animal && e.flavor == synergy.flavor,
+  )) {
     return PartnerType.Exploiter;
   }
-  if (provider.contains(synergy)) {
+  if (provider.any(
+    (e) => e.animal == synergy.animal && e.flavor == synergy.flavor,
+  )) {
     return PartnerType.Provider;
   }
 
