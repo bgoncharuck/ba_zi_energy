@@ -1,9 +1,9 @@
 import '../animals.dart';
 
-Set<Animal> get cups => {Animal.Pig, Animal.Rabbit, Animal.Goat};
-Set<Animal> get wands => {Animal.Dragon, Animal.Monkey, Animal.Rat};
-Set<Animal> get coins => {Animal.Snake, Animal.Rooster, Animal.Ox};
-Set<Animal> get swords => {Animal.Horse, Animal.Dog, Animal.Tiger};
+Set<Animal> get wands => {Animal.Pig, Animal.Rabbit, Animal.Goat};
+Set<Animal> get coins => {Animal.Dragon, Animal.Monkey, Animal.Rat};
+Set<Animal> get swords => {Animal.Snake, Animal.Rooster, Animal.Ox};
+Set<Animal> get cups => {Animal.Horse, Animal.Dog, Animal.Tiger};
 
 Set<Animal> get spring => {Animal.Tiger, Animal.Rabbit, Animal.Dragon};
 Set<Animal> get summer => {Animal.Snake, Animal.Horse, Animal.Goat};
