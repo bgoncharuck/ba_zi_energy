@@ -204,7 +204,7 @@ Element seasonOfYear(Animal animal) {
     case Animal.Monkey:
     case Animal.Rooster:
     case Animal.Dog:
-      return Element.Earth;
+      return Element.Metal;
     case Animal.Pig:
     case Animal.Rat:
     case Animal.Ox:
