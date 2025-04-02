@@ -35,7 +35,11 @@ List<PartnerType> partnerFor(PartnerType archetype) {
         PartnerType.Provider,
       ];
     case PartnerType.Polyamorous:
-      return [PartnerType.Polyamorous];
+      return [
+        PartnerType.MaleEnergyOvercharge,
+        PartnerType.FemaleEnergyOvercharge,
+        PartnerType.Polyamorous,
+      ];
     case PartnerType.MaleEnergyOvercharge:
       return [
         PartnerType.MaleEnergyOvercharge,
