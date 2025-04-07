@@ -42,20 +42,26 @@ List<PartnerType> partnerFor(PartnerType archetype) {
       ];
     case PartnerType.MaleEnergyOvercharge:
       return [
-        PartnerType.MaleEnergyOvercharge,
+        PartnerType.MasculineWife,
         PartnerType.FemaleEnergyOvercharge,
         PartnerType.Polyamorous,
       ];
     case PartnerType.FemaleEnergyOvercharge:
       return [
         PartnerType.MaleEnergyOvercharge,
-        PartnerType.FemaleEnergyOvercharge,
+        PartnerType.FeminineHusband,
         PartnerType.Polyamorous,
       ];
     case PartnerType.MasculineWife:
-      return [PartnerType.FeminineHusband];
+      return [
+        PartnerType.MaleEnergyOvercharge,
+        PartnerType.FeminineHusband,
+      ];
     case PartnerType.FeminineHusband:
-      return [PartnerType.MasculineWife];
+      return [
+        PartnerType.FemaleEnergyOvercharge,
+        PartnerType.MasculineWife,
+      ];
     case PartnerType.Exploiter:
       return [PartnerType.Exploiter];
   }
