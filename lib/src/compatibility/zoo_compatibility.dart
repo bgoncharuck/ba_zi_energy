@@ -55,3 +55,18 @@ const rivalry = [
   {Animal.Horse, Animal.Rat},
   {Animal.Goat, Animal.Ox},
 ];
+
+const animalFusion = <Animal, Animal>{
+  Animal.Tiger: Animal.Pig,
+  Animal.Rabbit: Animal.Dog,
+  Animal.Dragon: Animal.Rooster,
+  Animal.Snake: Animal.Monkey,
+  Animal.Horse: Animal.Goat,
+  Animal.Goat: Animal.Horse,
+  Animal.Monkey: Animal.Snake,
+  Animal.Rooster: Animal.Dragon,
+  Animal.Dog: Animal.Rabbit,
+  Animal.Pig: Animal.Tiger,
+  Animal.Rat: Animal.Ox,
+  Animal.Ox: Animal.Rat,
+};
