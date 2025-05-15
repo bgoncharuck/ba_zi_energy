@@ -147,6 +147,11 @@ const perfectHusband = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Pig, flavor: Energy.EarthYin),
   AnimalSynergy(animal: Animal.Rat, flavor: Energy.EarthYang),
   AnimalSynergy(animal: Animal.Ox, flavor: Energy.WoodYin),
+  //
+  AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.WoodYin),
+  AnimalSynergy(animal: Animal.Rooster, flavor: Energy.MetalYin),
+  //
+  AnimalSynergy(animal: Animal.Dragon, flavor: Energy.EarthYang),
 ];
 
 const masculineWife = <AnimalSynergy>[
@@ -176,7 +181,12 @@ const perfectWife = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Dog, flavor: Energy.WaterYang),
   AnimalSynergy(animal: Animal.Pig, flavor: Energy.FireYin),
   AnimalSynergy(animal: Animal.Rat, flavor: Energy.FireYang),
-  AnimalSynergy(animal: Animal.Ox, flavor: Energy.WaterYin)
+  AnimalSynergy(animal: Animal.Ox, flavor: Energy.WaterYin),
+  //
+  AnimalSynergy(animal: Animal.Tiger, flavor: Energy.WoodYang),
+  AnimalSynergy(animal: Animal.Monkey, flavor: Energy.MetalYang),
+  //
+  AnimalSynergy(animal: Animal.Ox, flavor: Energy.EarthYin),
 ];
 
 const feminineHusband = <AnimalSynergy>[
@@ -197,22 +207,22 @@ const feminineHusband = <AnimalSynergy>[
 const maleEnergyOvercharge = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Horse, flavor: Energy.FireYang),
   AnimalSynergy(animal: Animal.Rat, flavor: Energy.WaterYang),
+  AnimalSynergy(animal: Animal.Tiger, flavor: Energy.WoodYang),
+  AnimalSynergy(animal: Animal.Monkey, flavor: Energy.MetalYang),
 ];
 
 const femaleEnergyOvercharge = <AnimalSynergy>[
   AnimalSynergy(animal: Animal.Snake, flavor: Energy.FireYin),
   AnimalSynergy(animal: Animal.Pig, flavor: Energy.WaterYin),
+  AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.WoodYin),
+  AnimalSynergy(animal: Animal.Rooster, flavor: Energy.MetalYin),
 ];
 
 const polygamy = <AnimalSynergy>[
-  AnimalSynergy(animal: Animal.Tiger, flavor: Energy.WoodYang),
-  AnimalSynergy(animal: Animal.Rabbit, flavor: Energy.WoodYin),
   AnimalSynergy(animal: Animal.Dragon, flavor: Energy.EarthYang),
   AnimalSynergy(animal: Animal.Snake, flavor: Energy.FireYin),
   AnimalSynergy(animal: Animal.Horse, flavor: Energy.FireYang),
   AnimalSynergy(animal: Animal.Goat, flavor: Energy.EarthYin),
-  AnimalSynergy(animal: Animal.Monkey, flavor: Energy.MetalYang),
-  AnimalSynergy(animal: Animal.Rooster, flavor: Energy.MetalYin),
   AnimalSynergy(animal: Animal.Dog, flavor: Energy.EarthYang),
   AnimalSynergy(animal: Animal.Pig, flavor: Energy.WaterYin),
   AnimalSynergy(animal: Animal.Rat, flavor: Energy.WaterYang),
