@@ -33,6 +33,7 @@ List<PartnerType> partnerFor(PartnerType archetype) {
         PartnerType.PerfectHusband,
         PartnerType.PerfectWife,
         PartnerType.Provider,
+        PartnerType.Exploiter,
       ];
     case PartnerType.Polyamorous:
       return [
@@ -63,7 +64,10 @@ List<PartnerType> partnerFor(PartnerType archetype) {
         PartnerType.MasculineWife,
       ];
     case PartnerType.Exploiter:
-      return [PartnerType.Exploiter];
+      return [
+        PartnerType.Exploiter,
+        PartnerType.Provider,
+      ];
   }
 }
 
