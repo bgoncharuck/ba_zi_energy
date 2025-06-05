@@ -1,4 +1,5 @@
 import '../animals.dart';
+import '../exts.dart';
 
 Set<Animal> get wands => {Animal.Pig, Animal.Rabbit, Animal.Goat};
 Set<Animal> get swords => {Animal.Dragon, Animal.Monkey, Animal.Rat};
