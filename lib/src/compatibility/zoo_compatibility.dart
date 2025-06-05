@@ -56,6 +56,8 @@ const rivalry = [
   {Animal.Goat, Animal.Ox},
 ];
 
+Animal rivalOf(Animal animal) => Animal.values.forward(animal, 6);
+
 const animalFusion = <Animal, Animal>{
   Animal.Tiger: Animal.Pig,
   Animal.Rabbit: Animal.Dog,
