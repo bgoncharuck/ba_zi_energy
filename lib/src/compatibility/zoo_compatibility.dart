@@ -1,4 +1,5 @@
 import '../animals.dart';
+import '../elements.dart';
 import '../exts.dart';
 
 Set<Animal> get wands => {Animal.Pig, Animal.Rabbit, Animal.Goat};
@@ -72,4 +73,20 @@ const animalFusion = <Animal, Animal>{
   Animal.Pig: Animal.Tiger,
   Animal.Rat: Animal.Ox,
   Animal.Ox: Animal.Rat,
+};
+
+
+const animalFusionResult = <Animal, Element>{
+  Animal.Tiger: Element.Wood,
+  Animal.Rabbit: Element.Fire,
+  Animal.Dragon: Element.Metal,
+  Animal.Snake: Element.Water,
+  Animal.Horse: Element.Fire,
+  Animal.Goat: Element.Fire,
+  Animal.Monkey: Element.Water,
+  Animal.Rooster: Element.Metal,
+  Animal.Dog: Element.Fire,
+  Animal.Pig: Element.Wood,
+  Animal.Rat: Element.Earth,
+  Animal.Ox: Element.Earth,
 };
