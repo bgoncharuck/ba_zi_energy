@@ -214,16 +214,16 @@ Element seasonOfYear(Animal animal) {
 
 const Map<Animal, List<Energy>> hiddenAnimalEnergies = {
   Animal.Tiger: [Energy.WoodYang, Energy.FireYang, Energy.EarthYang],
-  Animal.Rabbit: [Energy.WoodYin],
+  Animal.Rabbit: [Energy.WoodYin, Energy.WoodYin],
   Animal.Dragon: [Energy.EarthYang, Energy.WoodYin, Energy.WaterYin],
   Animal.Snake: [Energy.FireYang, Energy.MetalYang, Energy.EarthYang],
   Animal.Horse: [Energy.FireYin, Energy.EarthYin],
   Animal.Goat: [Energy.EarthYin, Energy.FireYin, Energy.WoodYin],
   Animal.Monkey: [Energy.MetalYang, Energy.WaterYang, Energy.EarthYang],
-  Animal.Rooster: [Energy.MetalYin],
+  Animal.Rooster: [Energy.MetalYin, Energy.MetalYin],
   Animal.Dog: [Energy.EarthYang, Energy.MetalYin, Energy.FireYin],
   Animal.Pig: [Energy.WaterYang, Energy.WoodYang],
-  Animal.Rat: [Energy.WaterYin],
+  Animal.Rat: [Energy.WaterYin, Energy.WaterYin],
   Animal.Ox: [Energy.EarthYin, Energy.WaterYin, Energy.MetalYin],
 };
 
